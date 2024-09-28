@@ -7,6 +7,6 @@ public class Entry
 
     public void Display()
     {
-        Console.WriteLine($"This is output from the Entry class");
+        Console.WriteLine($"{_date}|{_promtText}|{_entryText}");
     }
 }
