@@ -18,18 +18,19 @@ class Program
             {   
                 DateTime theCurrentTime = DateTime.Now;
                 string dateText = theCurrentTime.ToShortDateString();
-                string promptText = "How did you feel today? ";
-                Console.WriteLine(promptText);
+                PromptGenerator prompt = new PromptGenerator();
+                prompt.GetRandomPrompt();
                 string entry = Console.ReadLine();
 
                 Entry entry1 = new Entry();
                 entry1._date = dateText;
-                entry1._promtText = promptText;
+                entry1._promtText = prompt.GetRandomPrompt();
                 entry1._entryText = entry;
+                entry1.Display();
             }
             else if (choice == "2")
             {
-                Console.WriteLine("ESTE ES OPCION 2222");
+                Console.WriteLine("ESTE ES OPCION 3333");
             }
             else if (choice == "3")
             {
