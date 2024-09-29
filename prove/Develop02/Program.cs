@@ -30,15 +30,15 @@ class Program
             }
             else if (choice == "2")
             {
-                Console.WriteLine("ESTE ES OPCION 3333");
+                Console.WriteLine("Display functionality is not implemented yet");
             }
             else if (choice == "3")
             {
-                Console.WriteLine("ESTE ES OPCION 3333");
+                Console.WriteLine("Load functionality is not implemented yet");
             }
             else if (choice == "4")
             {
-                Console.WriteLine("ESTE ES OPCION 4444");
+                Console.WriteLine("Save functionality is not implemented yet");
             }
             else if (choice == "5")
             {
