@@ -17,16 +17,14 @@ class Program
             string choice = Console.ReadLine();
 
             if (choice == "1")
-            {   
+            {
+                Entry entry1 = new Entry();
                 DateTime theCurrentTime = DateTime.Now;
                 string dateText = theCurrentTime.ToShortDateString();
-                PromptGenerator prompt = new PromptGenerator();
-                prompt.GetRandomPrompt();
-                string entry = Console.ReadLine();
-
-                Entry entry1 = new Entry();
                 entry1._date = dateText;
+                PromptGenerator prompt = new PromptGenerator();
                 entry1._promtText = prompt.GetRandomPrompt();
+                string entry = Console.ReadLine();
                 entry1._entryText = entry;
                 journal.AddEntry(entry1);
             }
