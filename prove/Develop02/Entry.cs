@@ -4,7 +4,7 @@ public class Entry
     public string _date;
     public string _promptText;
     public string _entryText;
-    public string _feeling;
+    public string _feeling; //this is the extra method - this is for tracking the feelings of the user.
 
     public void Display()
     {

@@ -26,6 +26,9 @@ class Program
                 entry1._promptText = prompt.GetRandomPrompt();
                 string entry = Console.ReadLine();
                 entry1._entryText = entry;
+                Console.Write("How did you feel today? "); //I added this question so the journal program can help the user track the feelings they had during writing in the journal
+                string feeling = Console.ReadLine(); //the answer is stored in the _feeling of the Entry Class
+                entry1._feeling = feeling;
                 journal.AddEntry(entry1);
             }
             else if (choice == "2")
