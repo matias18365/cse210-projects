@@ -1,10 +1,20 @@
 using System;
+using System.Collections.Generic;
+
 public class Journal
 {
-    public List<Entry> _entries = new List<Entry>
+    public List<Entry> _entries = new List<Entry>();
 
-    public void DisplayAll(Entry)
+    public void DisplayAll()
     {
-        Console.WriteLine($"THESE ARE ALL THE ENTRIES");
+        foreach (Entry entry in _entries)
+        {
+            entry.Display();
+        }
+    }
+
+    public void AddEntry(Entry entry)
+    {
+        _entries.Add(entry);
     }
 }
