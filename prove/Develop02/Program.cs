@@ -34,7 +34,9 @@ class Program
             }
             else if (choice == "3")
             {
-                Console.WriteLine("Load functionality is not implemented yet");
+                Console.WriteLine("What is the name of the file you would like to load? ");
+                string filename = Console.ReadLine();
+                journal.LoadFromFile(filename);
             }
             else if (choice == "4")
             {
