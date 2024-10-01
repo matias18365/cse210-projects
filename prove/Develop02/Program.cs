@@ -2,7 +2,9 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {   bool running = true;
+    {   
+        Journal journal = new Journal();
+        bool running = true;
         while (running)
         {   
             Console.WriteLine("Please select one of the following choices:");
@@ -26,11 +28,11 @@ class Program
                 entry1._date = dateText;
                 entry1._promtText = prompt.GetRandomPrompt();
                 entry1._entryText = entry;
-                entry1.Display();
+                journal.AddEntry(entry1);
             }
             else if (choice == "2")
             {
-                Console.WriteLine("Display functionality is not implemented yet");
+                journal.DisplayAll();
             }
             else if (choice == "3")
             {
