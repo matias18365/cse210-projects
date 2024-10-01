@@ -23,7 +23,7 @@ class Program
                 string dateText = theCurrentTime.ToShortDateString();
                 entry1._date = dateText;
                 PromptGenerator prompt = new PromptGenerator();
-                entry1._promtText = prompt.GetRandomPrompt();
+                entry1._promptText = prompt.GetRandomPrompt();
                 string entry = Console.ReadLine();
                 entry1._entryText = entry;
                 journal.AddEntry(entry1);
@@ -38,7 +38,9 @@ class Program
             }
             else if (choice == "4")
             {
-                Console.WriteLine("Save functionality is not implemented yet");
+                Console.WriteLine("What is the name of the file to save to? ");
+                string filename = Console.ReadLine();
+                journal.SaveToFile(filename);
             }
             else if (choice == "5")
             {

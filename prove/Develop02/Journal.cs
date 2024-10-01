@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
 
 public class Journal
 {
@@ -14,5 +16,16 @@ public class Journal
         {
             entry.Display();
         }
+    }
+    public void SaveToFile(string file)
+    {   string filename = file;
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            foreach(Entry entry in _entries)
+            {
+                outputFile.WriteLine($"{entry._date} | {entry._promptText} | {entry._entryText}");
+            }
+        }
+        Console.WriteLine($"Journal saved to {file}");
     }
 }
