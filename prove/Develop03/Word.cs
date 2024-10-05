@@ -2,7 +2,6 @@ using System;
 
 class Word
 {
-    static void Main(string[] args)
     private string _text;
     private bool _isHidden;
 

@@ -2,7 +2,6 @@ using System;
 
 class Reference
 {
-    static void Main(string[] args)
     private string _book;
     private int _chapter;
     private int _verse;
