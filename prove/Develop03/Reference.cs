@@ -9,16 +9,21 @@ class Reference
 
     public Reference(string book, int chapter, int verse)
     {
-        Console.WriteLine($"this is a constructor");
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
     }
-    public Reference(string book, int chapter, int startVerse, int _endVerse)
+    public Reference(string book, int chapter, int startVerse, int endVerse)
     {
-        Console.WriteLine($"this is a constructor");
+        _book = book;
+        _chapter = chapter;
+        _verse = startVerse;
+        _endVerse = endVerse;
     }
 
 
     private string GetDisplayText()
     {
-        Console.WriteLine($"this is a behavior");
+        return $"{_book} {_chapter}:{_verse}";
     }
 }

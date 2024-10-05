@@ -8,24 +8,30 @@ class Word
 
     public Word(string text)
     {
-        Console.WriteLine($"this is a constructor");
+        _text = text;
+        _isHidden = false;
     }
 
 
-    private void Hide()
+    public void Hide()
     {
-        Console.WriteLine($"this is a behavior");
+        _isHidden = true;
     }
-    private void Show()
+    public void Show()
     {
-        Console.WriteLine($"this is a behavior");
+        _isHidden = false;
     }
-    private bool IsHidden()
+    
+    public bool IsHidden()
     {
-        Console.WriteLine($"this is a behavior");
+        return IsHidden;
     }
-    private string GetDisplayText()
+    public string GetDisplayText()
     {
-        Console.WriteLine($"this is a behavior");
+        if (_isHidden)
+        }
+            return new string('_', _text.Length);
+        {
+        return _text;
     }
 }
