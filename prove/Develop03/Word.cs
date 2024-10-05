@@ -21,7 +21,7 @@ class Word
     {
         _isHidden = false;
     }
-    
+
     public bool IsHidden()
     {
         return IsHidden;
@@ -30,7 +30,7 @@ class Word
     {
         if (_isHidden)
         }
-            return new string('_', _text.Length);
+            return new string('_', _text.Length); //return underscores if the word is hidden
         {
         return _text;
     }
