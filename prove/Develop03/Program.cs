@@ -3,11 +3,8 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {   
-        Reference reference = new Reference("John", 3, 16);
-        string scriptureText = "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.";
-
-        Scripture scripture = new Scripture(reference, scriptureText);
+    {
+        Scripture scripture = GetRamdomScripture();
         bool running = true;
 
         while (running)
@@ -32,6 +29,25 @@ class Program
             {
                 Console.WriteLine("Invalid input, please press enter or type 'quit' to finish");
             }
+        }
+    }
+
+    static Scripture GetRandomScripture()
+    {
+        Random rand = new Random();
+        int selection = rand.Next(2); //Randmly select one of the scriptures
+
+        if(selection == 0)
+        {
+            Reference reference = new Reference ("John", 3, 16);
+            string text = "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.";
+            return new Scripture(reference, text);
+        }
+        else 
+        {
+            Reference reference = new Reference("Proverbs", 3, 5, 6);
+            string text = "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.";
+            return new Scripture(reference, text);
         }
     }
 }
