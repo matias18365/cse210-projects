@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Scripture scripture = GetRamdomScripture();
+        Scripture scripture = GetRandomScripture();
         bool running = true;
 
         while (running)

@@ -22,7 +22,7 @@ class Reference
     }
 
 
-    private string GetDisplayText()
+    public string GetDisplayText()
     {
         return $"{_book} {_chapter}:{_verse}";
     }
