@@ -22,7 +22,7 @@ class Scripture
         int hiddenCount = 0;
         while (hiddenCount < numberToHide)
         {
-            int index rand.Next(_words.Count);
+            int index = rand.Next(_words.Count);
             if (!_words[index].IsHidden())
             {
                 _words[index].Hide();

@@ -29,9 +29,9 @@ class Word
     public string GetDisplayText()
     {
         if (_isHidden)
-        }
-            return new string('_', _text.Length); //return underscores if the word is hidden
         {
+            return new string('_', _text.Length); //return underscores if the word is hidden
+        }
         return _text;
     }
 }
