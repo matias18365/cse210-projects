@@ -10,12 +10,13 @@ class Program
         while (running)
         {   
             Console.Clear(); //This will clear the console
-            Console.WriteLine(scripture.GetDisplayText());
+            Console.WriteLine(scripture.GetDisplayText() + "\n");
+            Console.WriteLine("Press enter to continue or type 'quit' to finish:");
             string choice = Console.ReadLine();
 
             if (choice == "")
             {
-                scripture.HideRanbomWords(1); //Hide 3 words
+                scripture.HideRanbomWords(3); //Hide 3 words
                 if (scripture.IsCompletelyHidden())
                 {
                     running = false;
@@ -35,12 +36,18 @@ class Program
     static Scripture GetRandomScripture()
     {
         Random rand = new Random();
-        int selection = rand.Next(2); //Randmly select one of the scriptures
+        int selection = rand.Next(3); //Randomly select one of the scriptures
 
-        if(selection == 0)
+        if (selection == 0)
         {
             Reference reference = new Reference ("John", 3, 16);
             string text = "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.";
+            return new Scripture(reference, text);
+        }
+        else if (selection == 1)
+        {
+            Reference reference = new Reference("Mosiah", 2, 17);
+            string text = "And behold, I tell you these things that ye may learn wisdom; that ye may learn that when ye are in the service of your fellow beings ye are only in the service of your God.";
             return new Scripture(reference, text);
         }
         else 
