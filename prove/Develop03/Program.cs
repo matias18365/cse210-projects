@@ -15,7 +15,7 @@ class Program
 
             if (choice == "")
             {
-                scripture.HideRanbomWords(3); //Hide 3 words
+                scripture.HideRanbomWords(1); //Hide 3 words
                 if (scripture.IsCompletelyHidden())
                 {
                     running = false;
