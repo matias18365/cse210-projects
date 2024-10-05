@@ -22,7 +22,7 @@ class Word
     }
     private bool IsHidden()
     {
-        Console.WriteLine($"this is a behavior")
+        Console.WriteLine($"this is a behavior");
     }
     private string GetDisplayText()
     {
