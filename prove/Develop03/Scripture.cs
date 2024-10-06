@@ -26,8 +26,8 @@ class Scripture
                 unhiddenWords++;
             }
         }
-        //Set numberToHide to the number of words left to hide, if less than 3
-        if (unhiddenWords < numberToHide)
+        
+        if (unhiddenWords < numberToHide) //Set numberToHide to the number of words left to hide, if less than 3
         {
             numberToHide = unhiddenWords;
         }
