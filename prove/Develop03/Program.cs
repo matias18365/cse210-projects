@@ -18,7 +18,9 @@ class Program
             {
                 scripture.HideRanbomWords(3); //Hide 3 words
                 if (scripture.IsCompletelyHidden())
-                {
+                {   
+                    Console.Clear();
+                    Console.WriteLine(scripture.GetDisplayText() + "\n");
                     running = false;
                 }
             }
