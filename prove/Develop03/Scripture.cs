@@ -18,6 +18,20 @@ class Scripture
 
     public void HideRanbomWords(int numberToHide)
     {
+        int unhiddenWords = 0;
+        foreach (Word word in _words)
+        {
+            if (!word.IsHidden())
+            {
+                unhiddenWords++;
+            }
+        }
+        //Set numberToHide to the number of words left to hide, if less than 3
+        if (unhiddenWords < numberToHide)
+        {
+            numberToHide = unhiddenWords;
+        }
+
         Random rand = new Random();
         int hiddenCount = 0;
         while (hiddenCount < numberToHide)
