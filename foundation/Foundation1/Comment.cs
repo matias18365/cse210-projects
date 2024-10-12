@@ -14,6 +14,6 @@ public class Comment
 
     public void DisplayComment()
     {
-        Console.WriteLine($"{_user} commented on {_commentDate}: "{_commentText}"")
+        Console.WriteLine($"{_user} commented on {_commentDate}: "{_commentText}"");
     }
 }
