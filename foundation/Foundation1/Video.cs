@@ -1,8 +1,9 @@
 using System;
+using System.Collections.Generic;
 public class Video
 {
     public string _title;
-    public string _author:
+    public string _author;
     public int _lenghtInSeconds;
     public List<Comment> Comments;
 
@@ -35,7 +36,10 @@ public class Video
     public void DisplayComment()
     {
         Console.WriteLine("Comments:");
-        foreach comment.DisplayComment();
+        foreach (var comment in Comments)
+        {
+            comment.DisplayComment();
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
 }

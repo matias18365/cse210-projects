@@ -1,11 +1,13 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 public class Comment
 {
     public string _user;
     public string _commentText;
-    public datetime _commentDate;
+    public System.DateTime _commentDate;
 
-    public Comment(string user, string comment, datetime commentDate)
+    public Comment(string user, string comment, System.DateTime commentDate)
     {
         _user = user;
         _commentText = comment;
@@ -14,6 +16,6 @@ public class Comment
 
     public void DisplayComment()
     {
-        Console.WriteLine($"{_user} commented on {_commentDate}: "{_commentText}"");
+        Console.WriteLine($"{_user} commented on {_commentDate}: '{_commentText}'");
     }
 }
