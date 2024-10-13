@@ -28,4 +28,19 @@ public class Order
         double shippingCost = _customer.IsInUSA() ? 5 : 35;
         return totalCost + shippingCost;
     }
+
+    public string GetPackingLable()
+    {
+        string packingLabel = "Packing Label: \n";
+        foreach (var product in _products)
+        {
+            packingLabel += $"{product.Name} (ID; {product.ProductId}\n)";
+        }
+        return packingLabel;
+    }
+
+    public string GetShippingLabel()
+    {
+        return $"Shipping Label: \n{_customer.Name}\n{_customer.Address.FullAddress()}";
+    }
 }
