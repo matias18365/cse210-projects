@@ -29,12 +29,12 @@ public class Order
         return totalCost + shippingCost;
     }
 
-    public string GetPackingLable()
+    public string GetPackingLabel()
     {
         string packingLabel = "Packing Label: \n";
         foreach (var product in _products)
         {
-            packingLabel += $"{product.Name} (ID; {product.ProductId}\n)";
+            packingLabel += $"{product.Name} (ID; {product.ProductId})\n";
         }
         return packingLabel;
     }
