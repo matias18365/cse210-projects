@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-public class ReflectingActivity
+public class Activity
 {
     private string _name;
     private string _description;
