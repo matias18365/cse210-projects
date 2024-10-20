@@ -9,21 +9,20 @@ class BreathingActivity : Activity
 
     public void Run()
     {
-        // Muestra el mensaje inicial y define la duración
+        
         DisplayStartingMessage();
-        int duration = GetDuration();  // Obtiene la duración de la actividad en segundos
-        DateTime endTime = DateTime.Now.AddSeconds(duration);  // Calcula el tiempo de finalización
+        int duration = GetDuration();  
+        DateTime endTime = DateTime.Now.AddSeconds(duration);  
 
-        // Mientras no se haya alcanzado el tiempo de finalización, realiza la actividad de respiración
+        
         while (DateTime.Now < endTime)
         {
             Console.WriteLine("Breathe in...");
-            ShowCountDown(4);  // Cuenta regresiva de 4 segundos para inhalar
+            ShowCountDown(4);  
             Console.WriteLine("Breathe out...");
-            ShowCountDown(6);  // Cuenta regresiva de 6 segundos para exhalar
+            ShowCountDown(6);  
         }
 
-        // Muestra el mensaje final una vez terminada la actividad
         DisplayEndingMessage();
     }
 }

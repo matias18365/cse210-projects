@@ -17,18 +17,19 @@ class Program
             Console.Write("Select an activity: ");
             string choice = Console.ReadLine();
 
-            Activity activity = null;
-
             switch (choice)
             {
                 case "1":
-                    activity = new BreathingActivity();
+                    var breathingActivity = new BreathingActivity();
+                    breathingActivity.Run();
                     break;
                 case "2":
-                    activity = new ReflectingActivity();
+                    var reflectingActivity = new ReflectingActivity();
+                    reflectingActivity.Run();
                     break;
                 case "3":
-                    activity = new ListingActivity();
+                    var listingActivity = new ListingActivity();
+                    listingActivity.Run();
                     break;
                 case "4":
                     running = false;
@@ -37,9 +38,6 @@ class Program
                     Console.WriteLine("Invalid choice. Please select again.");
                     continue;
             }
-
-            activity.DisplayStartingMessage();
-            activity.ShowSpinner(3);
         }
     }
 }
