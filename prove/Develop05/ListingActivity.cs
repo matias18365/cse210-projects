@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-class ListeningActivity : Activity
+class ListingActivity : Activity
 {
     private int _count;
     private List<string> _prompts = new List<string>
@@ -13,7 +13,7 @@ class ListeningActivity : Activity
         "Who are some of your personal heroes?"
     };
 
-    public ListeningActivity() : base ("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.")
+    public ListingActivity() : base("Listing Activity", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.")
     {}
 
     public void Run()
@@ -33,15 +33,17 @@ class ListeningActivity : Activity
         return _prompts[random.Next(_prompts.Count)];
     }
 
-    private List<string> GetListFromUser();
+    private List<string> GetListFromUser()
     {
         List<string> items = new List<string>();
         System.DateTime endTime = System.DateTime.Now.AddSeconds(GetDuration());
-        while (System.DateTime < endTime)
+        
+        while (System.DateTime.Now < endTime)
         {
-            Console.WriteLine("List and item: ");
+            Console.Write("List an item: ");
             items.Add(Console.ReadLine());
         }
+        
         return items;
     }
 }

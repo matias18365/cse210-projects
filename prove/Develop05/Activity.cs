@@ -18,7 +18,7 @@ public class Activity
         Console.WriteLine($"\nWelcome to the {_name}.");
         Console.WriteLine($"{_description}");
         Console.WriteLine($"How long, in second, would you like to do this activity? ");
-        _duration = int,Parse(Console.ReadLine());
+        _duration = int.Parse(Console.ReadLine());
         Console.WriteLine("Get ready...");
         ShowSpinner(3);
     }
@@ -26,7 +26,7 @@ public class Activity
     public void DisplayEndingMessage()
     {
         Console.WriteLine("\nWell done!");
-        Console.WriteLine($"You have completed another {_duration} seconds of the {_name}.")
+        Console.WriteLine($"You have completed another {_duration} seconds of the {_name}.");
     }
 
     public void ShowSpinner(int seconds)
